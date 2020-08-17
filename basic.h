@@ -11,6 +11,6 @@
 #define MAX_LINES 1000
 
 // Number of commands in Basic.
-#define COMMAND_NUM 20 
+#define COMMAND_NUM 20
 
 #endif

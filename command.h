@@ -6,24 +6,24 @@
 #include "basic.h"
 #include "math.h"
 
-struct commands{
-	char name[20];
-	void (*function)(char*);
+struct commands {
+    char name[20];
+    void (*function)(char *);
 };
 
-void print(char*);
+void print(char *);
 void system_exit();
 void run();
 void resume();
-void line(char*);
+void line(char *);
 void new_program();
 void list_program();
 void clear();
-void ifthen(char*);
-void for_to(char*);
+void ifthen(char *);
+void for_to(char *);
 void next();
 void rem();
-void let(char*);
-void input(char*);
+void let(char *);
+void input(char *);
 
 #endif

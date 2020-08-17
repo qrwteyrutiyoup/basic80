@@ -9,7 +9,7 @@
 
 
 
-void load(char*);
+void load(char *);
 
 
 

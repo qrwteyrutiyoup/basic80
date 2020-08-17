@@ -3,30 +3,30 @@
 /* From error.c. */
 extern int error;
 
-void load(char *filename){
+void load(char *filename) {
 
-	FILE *fp;
+    FILE *fp;
 
-	char linebuffer[255];
+    char linebuffer[255];
 
-	fp = fopen(filename,"r");
-	if(fp == NULL){
-		error = FILEERROR;
-		return;
-	}
-	// Clean Program space.
-	new_program();
+    fp = fopen(filename, "r");
+    if (fp == NULL) {
+        error = FILEERROR;
+        return;
+    }
+    // Clean Program space.
+    new_program();
 
-	while(fscanf(fp,"%[^\n]\n",linebuffer) != EOF){
-		//printf("%s\n",linebuffer);
-		enter_line(linebuffer);
-		if(ferror(fp)){
-			error = FILEERROR;
-			return;		
-		}
-	}
+    while (fscanf(fp, "%[^\n]\n", linebuffer) != EOF) {
+        //printf("%s\n",linebuffer);
+        enter_line(linebuffer);
+        if (ferror(fp)) {
+            error = FILEERROR;
+            return;
+        }
+    }
 
-	fclose(fp);
+    fclose(fp);
 
 
 

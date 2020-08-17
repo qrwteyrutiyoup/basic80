@@ -4,10 +4,10 @@
 
 #include <math.h>
 #include "error.h"
-#include "var.h"	
+#include "var.h"
 
 float operate(float, float, char);
-float  eval(char*, int);
-float evaluate(char*);
+float eval(char *, int);
+float evaluate(char *);
 
 #endif
