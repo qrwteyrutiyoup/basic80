@@ -7,14 +7,16 @@
  
  1. Get the project files by using `git clone https://github.com/kortkamp/basic80`
  1. Go into project directory `cd basic80`
- 1. Run `make` command and the code should compiler normally.
+ 1. Create a build directory and enter it: `mkdir build; cd build`
+ 1. Run meson (you need it installed): `meson ..`
+ 1. Finally, run `ninja`: `ninja`. This should build the `basic` binary.
 
 
 # Running 
 	
-1. You may run `make run` or, after compilation, run `./basic` .
+1. Once you have built the `basic` binary with `ninja` -- refer to the previous section for info on how to build it --, simply run it: `./basic`.
 
-1. Basic files can be loaded by using argument when calling the program like: `./basic mandelbrot.bas` .
+1. Basic files can be loaded by using argument when calling the program like: `./basic ../mandelbrot.bas` .
 
 1. Basic files can be loaded by using `LOAD` statement , but currently only uppercase named files in this form.
 
