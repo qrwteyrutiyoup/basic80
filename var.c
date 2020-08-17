@@ -73,7 +73,7 @@ int set_str_var(char *name, char *str) {
     return (0);
 }
 
-// Return a pointer to content of a var string, 
+// Return a pointer to content of a var string,
 // if the string doesnt exist, return a pointer to a NULL string
 // A var name must be ended with '$'
 char *get_str_var(char *name) {
@@ -111,7 +111,7 @@ int test_attribution(char *buffer) {
 }
 
 //TODO verificar se a variável é um string e chamar a função correspondente
-//TODO set Missing operand error 
+//TODO set Missing operand error
 float *exec_attribution(char *buffer) {
     char var_name[20];
     int size;                   // size of string read

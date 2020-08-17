@@ -59,7 +59,7 @@ void print(char *arg) {
             // Discard " by adding 1 to arg_pos
             arg_pos++;
             if (buff_pos > 0) {
-                // we have a expression before start 
+                // we have a expression before start
                 // of a string, so print evaluation of
                 // the expression
                 buff[buff_pos] = '\0';
@@ -93,7 +93,7 @@ void print(char *arg) {
     }
 
     if (buff_pos > 0) {
-        // we have a expression after end 
+        // we have a expression after end
         // of a string, so print evaluation of
         // the expression
         buff[buff_pos] = '\0';
@@ -276,7 +276,7 @@ float get_for_step(char *line) {
             return (1);
         return (-1);
     }
-    // Position right after the "STEP " 
+    // Position right after the "STEP "
     step += 4;
     return (evaluate(step));
 }
@@ -304,7 +304,7 @@ void for_to(char *arg) {
     return;
 }
 
-// Tests a FOR loop. 
+// Tests a FOR loop.
 int test_for(char *line) {
 
     // Indicates if a FOR statement goes forward or backward.

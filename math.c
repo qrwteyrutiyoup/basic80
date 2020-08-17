@@ -7,7 +7,7 @@
 /* From error.c. */
 extern int error;
 
-//TODO add math function 
+//TODO add math function
 //TODO add >= <= <> in operate
 float operate(float op1, float op2, char op) {
 //  printf("operate: %ld %c %ld \n",op1, op ,op2);
@@ -74,14 +74,14 @@ float eval(char *arg, int tier) {
     float value = 0;
     int inside_bracket = 0;     // false
 
-    //for(int i = 0 ; i < tier; i++) printf("   ");     
-    //printf("tier: %d expression: %s \n",tier,arg); 
+    //for(int i = 0 ; i < tier; i++) printf("   ");
+    //printf("tier: %d expression: %s \n",tier,arg);
 
     // tier 4 returns numbers, vars and functions
     if (tier == 4) {
-        //for(int i = 0 ; i < tier; i++) printf("   "); 
+        //for(int i = 0 ; i < tier; i++) printf("   ");
 
-        //printf("tier: %d expression: (%s) \n",tier,arg); 
+        //printf("tier: %d expression: (%s) \n",tier,arg);
 
         // If we got a expression inside brackets
         if (arg[0] == '(') {
@@ -119,7 +119,7 @@ float eval(char *arg, int tier) {
                 inside_bracket--;
                 //arg_pos++;
             }
-            // Discard spaces.  
+            // Discard spaces.
             if (arg[arg_pos] != ' ') {
                 exp[exp_pos] = arg[arg_pos];
                 exp_pos++;
@@ -130,7 +130,7 @@ float eval(char *arg, int tier) {
                     || arg[arg_pos] == '\0') {
                     exp[exp_pos] = '\0';
                     evalued = eval(exp, tier + 1);
-                    //for(int i = 0 ; i < tier; i++) printf("   ");     
+                    //for(int i = 0 ; i < tier; i++) printf("   ");
                     value = operate(value, evalued, operator);
                     operator = arg[arg_pos];
                     exp_pos = 0;
@@ -144,14 +144,14 @@ float eval(char *arg, int tier) {
         if (inside_bracket != 0)
             error = MATHERROR;
     }
-    //for(int i = 0 ; i < tier; i++) printf("   ");     
+    //for(int i = 0 ; i < tier; i++) printf("   ");
     //printf(":::value:%ld\n",value);
     return (value);
 }
 
 float evaluate(char *arg) {
-    //char argt[] = "12*(3^2-456)*78+3+91"; 
-    //char argt[] = "2 * (2 + 2 * (1+ 3) ) + 3";    
+    //char argt[] = "12*(3^2-456)*78+3+91";
+    //char argt[] = "2 * (2 + 2 * (1+ 3) ) + 3";
     //printf("\navaluated expression %s = %ld \n",argt,eval(argt,0));
     return (eval(arg, 0));
 }

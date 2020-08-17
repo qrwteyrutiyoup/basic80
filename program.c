@@ -44,7 +44,7 @@ int exec_single(char *line) {
     char command[10];
     char arg[50] = { 0 };       // Argument of command.
     sscanf(line, "%[^ ] %[^\n]s", command, arg);
-    //printf("%s >> %s\n",command, arg);        
+    //printf("%s >> %s\n",command, arg);
     for (int i = 0; i < COMMAND_NUM; i++)
         if (!strcmp(command, command_list[i].name)) {
             (command_list[i].function) (arg);
